@@ -1,4 +1,5 @@
-Notas 2 
+Notas 2  D:
+
 
 1.- Visualizar las tablas en el servidor. 
 	admin.py 
