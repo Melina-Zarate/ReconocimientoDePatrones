@@ -1,0 +1,36 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+{% load static %}
+{% load filtros %}
+<title>Tablas de Grafos</title>
+<link rel="stylesheet" type='text/css' href="{% static 'css/grafo.css' %}">
+<h1 class="subtitulo">Grafos</h1>
+
+
+
+<div class = "tabla2">
+
+    <h2>Distancia entre las normas</h2>
+    <table style="border: 7px solid rgb(255, 70, 139);">
+    
+        <tbody>
+    
+            {% for row in resultado %}
+                <tr>
+            {% for cell in row %}
+                {% if forloop.first or forloop.parentloop.first %} <th> {% else %} <td> {% endif %}
+                    {{ cell }}
+                {% if forloop.first or forloop.parentloop.first %} </th> {% else %} </td> {% endif %}
+            {% endfor %}
+                </tr>
+        {% endfor %}
+    
+        </tbody>
+    
+    </table>
+
+</div>
+
+
+{% endblock contenido %}

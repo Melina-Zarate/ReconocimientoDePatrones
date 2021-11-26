@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-color: #4d002f;
+  box-sizing: border-box;
+}
+
+svg {
+  position: absolute;
+  font: 8em Ubuntu;
+  letter-spacing: 0.15em;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  
+}
+
+svg text {
+  fill: #ffffff;
+  stroke: rgb(93, 93, 93);
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+  font-weight: bold;
+}
+
+@keyframes stroke-offset {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 0;
+    stroke-dasharray: 0% 100%;
+  }
+  25% {
+    stroke-width: 3px;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 40px;
+  color: #c90962;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.card {
+  background: rgb(116, 0, 46);
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: absolute;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 40%;
+  font-size: 1.5em;
+  color: rgb(218 20 98/0%);
+  cursor: pointer;
+  font-family: cursive;
+  display: block;
+}
+
+.card:hover {
+  color: rgb(255 255 255 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #ff31c1, #ff2727 43%, #a51dff);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #ff6fd4, #ff7b7b 43%, #d28fff);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+div{
+  display: block;
+  height: 400px;
+  width: 100%;
+  color: #ffffff;
+  align-items: center;
+}
+
+h3{
+  margin-top: 35%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}

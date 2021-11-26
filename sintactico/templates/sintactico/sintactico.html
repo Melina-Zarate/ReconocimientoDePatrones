@@ -1,0 +1,79 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+{% load static %}
+<title>Sintactico</title>
+<link rel="stylesheet" type='text/css' href="{% static 'css/sintactico.css' %}">
+<h1 class="subtitulo">Sintáctico</h1>
+
+<div class="tabla1">
+
+    <h2>Tabla de Tejidos</h2> 
+
+    <table style="border: 7px solid rgb(255, 70, 139);">
+
+        <thead>
+
+            <tr>
+
+                <th>Clave</th>
+                <th>Temperatura</th>
+                <th>Color</th>
+                <th>Inflamación</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for elemento in lista %}
+            <tr>
+                    
+                <td style="border: 7px solid rgb(255, 70, 139);" >{{elemento.pk}}</td>
+                <td style="border: 7px solid rgb(255, 70, 139);" >{{elemento.temperatura}}</td>
+                <td style="border: 7px solid rgb(255, 70, 139);" >{{elemento.color}}</td>
+                <td style="border: 7px solid rgb(255, 70, 139);" >{{elemento.inflammation}}</td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+    
+<div class = "tabla2">
+
+    <h2>Tabla Norma de Tejidos</h2>
+    <table style="border: 7px solid rgb(255, 70, 139);">
+    
+        <thead>
+    
+            <tr>
+    
+                <th>Norma Valores</th>
+    
+            </tr>
+    
+        </thead>
+    
+        <tbody>
+    
+            {% for elemento in listaProcesada %}
+            <tr>
+                    
+                <td style="border: 7px solid rgb(255, 70, 139);" >{{elemento}}</td>
+    
+            </tr>
+            {% endfor %}
+    
+        </tbody>
+    
+    </table>
+
+</div>
+
+{% endblock contenido %}

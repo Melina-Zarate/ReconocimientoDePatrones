@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de patrones Sintáctico Estructural OwO</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    
+    
+    <div class = "menu">
+        <h1 class="titulo">Octubre mes del cáncer de mama</h1>
+        <nav>
+            <a href="{% url 'home:home' %}"> Principal </a>
+            <a href="{% url 'grafo:grafo' %}">Grafo</a>
+            <a href="{% url 'about:about' %}">Acerca de</a>
+            <a href="{% url 'sintactico' %}">Sintáctico Estructural</a>
+            <div class="animation start-home"></div>
+        </nav>
+
+        <div class="separador1"></div>
+
+    </div>
+
+    <div class="separador2"></div>
+
+    {% block contenido %}
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'css/home.css' %}">
+
+    <div class="informacion">
+        <h1 class="subtitulo">Día Mundial de la Lucha contra el Cáncer de Mama</h1>
+        <h3> El 19 de octubre se celebra el Día Internacional de la Lucha contra el Cáncer de Mama, para sensibilizar y concienciar a las mujeres de todo el mundo, sobre la importancia de realizarse un examen de mamas regularmente, con la finalidad de detectar cualquier signo o anomalía.</h3>
+        <h3> Esta efeméride ha sido impulsada por la Organización Mundial de la Salud (OMS), para promover el diagnóstico precoz del cáncer de mama, así como incrementar el acceso de la población femenina a los controles y tratamientos oportunos de esta enfermedad.</h3>
+        
+        <img src="https://www.latercera.com/resizer/CQKOjgKbgjXRIHqnLp8JdV7hboo=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/KA2EATSFVVG5XOYPJN6JFQX4AU.jpg" alt="">
+        
+        <h1 class="subtitulo">¿Por qué se celebra el Día contra el Cáncer de Mama?</h1>
+        <h3>El cáncer de mama constituye la primera causa de muerte en la población femenina a nivel mundial. De acuerdo a las estadísticas emitidas por la Organización Mundial de la Salud (OMS), esta enfermedad representa el 16% de todos los cánceres en pacientes femeninos.</h3>
+        <h3>Por otra parte, se estima que 1 de cada 8 mujeres tendrá cáncer de mama a lo largo de su vida, razón por la cual es de vital importancia realizar una evaluación regular de los senos.</h3>
+        <h3>Se ha determinado que la detección precoz del cáncer de mama incide notablemente en la modificación del pronóstico de la enfermedad, incrementando las posibilidades de curación hasta en un 100%.</h3>
+        <br>
+        <center><iframe width="728" height="410" src="https://www.youtube.com/embed/U0GY8vIICwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        <center><h4>3 enfermeras comparten uno de los momentos más duros de su vida, el cáncer de mama</h4></center>
+
+        <h1 class="subtitulo">¿Qué es el cáncer de mama?</h1>
+        <h3>El cáncer de mama o de seno, es un tipo de tumor que se crea en las células y estructuras de las glándulas de los tejidos del seno. Puede diseminarse al resto del organismo a través de los vasos sanguíneos y los vasos linfáticos, conocido como metástasis.</h3>
+        <h3>Este tumor puede ser de dos tipos:</h3>
+        <h3>
+            <li>Carcinoma ductal localizado: el desarrollo de las células cancerosas se inicia dentro de los conductos del seno y se disemina en el resto del tejido mamario. Puede formar metástasis en otras partes del organismo.</li>
+            <li>Carcinoma lobulillar in situ: las células cancerosas se generan en los lobulillos del seno, diseminándose en el tejido mamario. Se considera que este tipo de tumor es pre-maligno, debido a que tienen mayor tendencia a desarrollar metástasis.</li>
+        </h3>
+        <h3>Igualmente se destacan otros tipos de cáncer de mama, tales como angiosarcoma y Enfermedad de Paget mamaria.</h3>
+        <h3>Entre las posibles causas y factores de riesgo se destacan las siguientes:</h3>
+
+        <h3>
+            <li>Mutaciones hereditarias en los genes P53, PTEN, BRCA1 y BRCA2y adquiridas del ADN.</li>
+            <li>Mayor exposición a estrógenos (producción de la enzima aromatasa).</li>
+            <li>Obesidad (elevado consumo de grasas y calorías).</li>
+            <li>Edad avanzada.</li>
+            <li>Consumo de tabaco y alcohol.</li>
+            <li>Menarquía prematura.</li>
+            <li>Menopausia tardía.</li>
+            <li>Factores ambientales.</li>
+        </h3>
+
+        <h3>El cáncer de mama afecta a ambos sexos, siendo mucho más frecuente en las mujeres.</h3>
+        <h3>En la actualidad, los desarrollos y avances en la investigación sobre esta enfermedad han contribuido a incrementar los índices de supervivencia de las personas afectadas, reduciendo el número de muertes por cáncer de mama.</h3>
+
+        <img src="https://www.tucanaldesalud.es/es/teinteresa/preguntas-frecuentes-cancer-mama/sintomas-cancer-pecho-deteccion-precoz.ficheros/2266617-sintomas-cancer-mama.jpg?width=591&height=582&aspectRatio=true" alt="">
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>    
+    
+
+
+    
+
+    {% endblock contenido %}
+
+    <p>
+        By <span>Marco Vidal y Melina Zárate</span>
+    </p>
+
+</body>
+</html>

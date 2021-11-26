@@ -1,0 +1,29 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+{% load static %}
+
+<title>Acerca de </title>
+<link rel="stylesheet" type='text/css' href="{% static 'css/about.css' %}">
+
+    <div>
+
+        <svg viewBox="0 0 1280 720">
+            <text text-anchor="middle" x="50%" y="11%">ACERCA DE NOSOTROS</text>
+            <text text-anchor="middle" x="50%" y="25%">OwO</text>
+        </svg>
+
+    </div>
+
+    <div >
+
+        <div class="card" >
+            <h3> Duo dinámico DJango con acento en la a de dinámico </h3>
+            <br><br> Presentando proyecto de Reconocimiento de Patrones Sintáctico Estructural
+            <br><br>Marco Antonio Vidal FLores
+            <br>Melina Alexia Zárate Zenteno
+        </div>
+
+    </div>
+  
+{% endblock contenido %}
